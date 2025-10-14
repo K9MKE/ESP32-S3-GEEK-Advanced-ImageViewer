@@ -1,0 +1,70 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "PlatformIO Build",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"-c",
+				"import subprocess; subprocess.run(['python', '-m', 'platformio', 'run'])"
+			],
+			"problemMatcher": [
+				"$platformio"
+			],
+			"group": "build",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			}
+		},
+		{
+			"label": "PlatformIO Upload",
+			"type": "shell",
+			"command": "${userHome}/.platformio/penv/Scripts/platformio.exe",
+			"args": [
+				"run",
+				"--target",
+				"upload"
+			],
+			"problemMatcher": [
+				"$platformio"
+			],
+			"group": "build",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			}
+		},
+		{
+			"label": "PlatformIO Clean",
+			"type": "shell",
+			"command": "${userHome}/.platformio/penv/Scripts/platformio.exe",
+			"args": [
+				"run",
+				"--target",
+				"clean"
+			],
+			"problemMatcher": [
+				"$platformio"
+			],
+			"group": "build",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			}
+		},
+		{
+			"label": "PlatformIO Monitor",
+			"type": "shell",
+			"command": "${userHome}/.platformio/penv/Scripts/platformio.exe",
+			"args": [
+				"device",
+				"monitor"
+			],
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			}
+		}
+	]
+}
