@@ -136,8 +136,10 @@ ESP32-S3-GEEK_SD_JPEG_PLAYER/
 # Build and upload
 pio run --target upload
 
-# Monitor serial output
-pio device monitor --port COM12 --baud 115200
+# Monitor serial output (replace COMx with your device's port)
+pio device monitor --port COMx --baud 115200
+# Or let PlatformIO auto-detect the port:
+pio device monitor --baud 115200
 ```
 
 ### 4. **Operation**
