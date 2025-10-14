@@ -1,6 +1,6 @@
-# ESP32-S3 Geek Image Display
+# ESP32-S3-GEEK Advanced Image Viewer
 
-A clean and efficient image display system for the Waveshare ESP32-S3 Geek module. Displays JPEG images from SD card with automatic scaling, letterboxing, and rotation.
+A sophisticated image slideshow system for the Waveshare ESP32-S3-GEEK module with professional UI design and advanced interactive controls.
 
 ## Hardware Requirements
 
@@ -18,8 +18,17 @@ A clean and efficient image display system for the Waveshare ESP32-S3 Geek modul
 - **Optional Embedded Images**: Add logos/icons to flash memory (see EMBEDDED_IMAGES_GUIDE.md)
 
 ### 🎮 **Controls**
-- **BOOT Button (GPIO0)**: Press to cycle through all available images
-- **LED Indicator (GPIO2)**: Blinks every second to show system is alive
+- **Single Press**: Advance to next image / change slideshow speed
+- **Double Press**: Toggle slideshow speed (8 levels: 0.5s to 30s)
+- **Hold 2 seconds**: Toggle between Manual and Slideshow modes
+- **LED Indicator (GPIO2)**: Shows system status and mode changes
+
+### 🖥️ **Professional Interface**
+- **Status Screens**: Clean orange-on-black UI graphics (design inspired by retro devices)
+- **Mode Indicators**: Visual feedback for Manual vs Slideshow modes  
+- **Speed Control**: 8-level slideshow timing (500ms to 30s)
+- **Visual Feedback**: Speed limit blinking and real-time overlays
+- **Hot-Swap Support**: Insert/remove SD card without restart
 
 ### 💾 **Storage**
 - **SD Card**: External JPEG files (primary storage method)

@@ -1,50 +1,59 @@
 # Version History
 
-## v2.0 - Current Release
-**Version**: 2.0.0  
+## v3.0 - Advanced Interface Edition
+**Version**: 3.0.0  
 **Release Date**: October 14, 2025  
 **Status**: Stable Release
 
 ### 🎯 **Project Overview**
-ESP32-S3 GEEK Image Display is a comprehensive solution for displaying JPEG images from SD card on the Waveshare ESP32-S3 GEEK module. Features automatic image processing, scaling, and rotation for optimal display quality.
+ESP32-S3 GEEK Advanced Image Viewer is a sophisticated image slideshow system with professional UI design and advanced interactive controls. Features comprehensive button controls, mode switching, and visual feedback systems.
 
 ### ✨ **Key Features**
-- **SD Card Primary**: Main image source is SD card JPEG files
-- **Optional Embedded**: Easy to add logos/icons when needed
-- **Image Processing**: Auto-scaling, letterboxing, and rotation
-- **Hardware Integration**: Full ESP32-S3 GEEK module support
-- **Clean Architecture**: Modular, maintainable codebase
+- **Professional UI Design**: Clean orange-on-black interface graphics
+- **Advanced Controls**: Single/double press, hold detection, mode switching
+- **Slideshow System**: Variable speed control (500ms to 30s intervals)
+- **Visual Feedback**: Status screens, speed indicators, limit blinking
+- **Hot-Swap SD**: Insert/remove SD card without restart
+- **Error Handling**: Comprehensive status displays for all scenarios
 
 ### 📁 **Project Structure**
 ```
 ESP32-S3-GEEK_SD_JPEG_PLAYER/
 ├── src/                     # Core source code
-│   ├── main.cpp            # Main application logic
-│   ├── image.h             # Image configuration
-│   ├── LCD_Driver.*        # Display drivers
-│   ├── GUI_Paint.*         # Graphics functions
-│   └── DEV_Config.h        # Hardware configuration
+│   ├── main.cpp            # Advanced interface application (1000+ lines)
+│   ├── image.h             # Status screen configurations
+│   ├── LCD_Driver.*        # Display drivers with rotation support
+│   ├── GUI_Paint.*         # Graphics functions and overlays
+│   └── *_data.h            # Embedded status screen graphics
 ├── scripts/
-│   └── convert_images.py   # Image conversion utility
-├── EMBEDDED_IMAGES_GUIDE.md # Complete embedded images guide
-├── README.md               # Project documentation
-└── platformio.ini          # Build configuration
+│   └── convert_images.py   # PNG to embedded data converter
+├── *.png                   # Status screen graphics (editable)
+├── guides/                 # Comprehensive documentation
+└── platformio.ini          # Optimized build configuration
 ```
 
-### 🖼️ **Image Support**
-| Source | Status | Formats | Features |
-|--------|--------|---------|----------|
-| **SD Card** | ✅ Primary | JPEG/JPG | Auto-loading, scaling, rotation |
-| **Embedded** | 🔧 Optional | RGB565 | Disabled by default, guide available |
-| **Error Handling** | ✅ Built-in | N/A | Red screen when no images found |
+### 🎮 **Control System**
+| Input | Action | Result |
+|-------|--------|--------|
+| **Single Press** | Next image / Speed change | Advance or adjust timing |
+| **Double Press** | Speed control | Cycle through 8 speed levels |
+| **Hold 2s** | Mode toggle | Switch Manual ↔ Slideshow |
+| **LED Feedback** | Status indicator | Shows mode changes and activity |
+
+### 🖥️ **Status Screens**
+- **Manual Mode**: Shows manual control graphic
+- **Slideshow Mode**: Custom graphic with speed display
+- **No SD Card**: Professional "Insert SD" message
+- **No Images**: Clear "No JPEG files found" display
+- **Scanning**: Loading animation during SD card scan
 
 ### 🔧 **Technical Specifications**
-- **Hardware**: Waveshare ESP32-S3 GEEK module
-- **Display**: ST7789V 240x135 pixels
-- **Storage**: SD card (FAT32 format)
-- **Memory**: Efficient RAM usage with dynamic loading
-- **Processing**: Hardware-accelerated JPEG decoding
-- **Interface**: Button control with LED status indicator
+- **Framework**: ESP32 Arduino with advanced timing control
+- **Display**: ST7789V with 270° rotation and overlays  
+- **Memory**: 11.5% RAM, 20.5% Flash usage
+- **Processing**: Hardware JPEG decoding + custom graphics
+- **Interface**: Sophisticated button state machine
+- **Graphics**: Custom 5x7 font rendering system
 
 ### 📋 **Dependencies**
 - **JPEGDEC**: v1.8.3 for JPEG decoding

@@ -204,8 +204,10 @@ def main():
     print("Target display: 135x240 pixels (ST7789V)")
     print("=" * 60)
     
-    # Find all supported image files
-    image_files = get_supported_images(project_root)
+    # Find all supported image files in scripts directory first, then project root
+    image_files = get_supported_images(script_dir)
+    if not image_files:
+        image_files = get_supported_images(project_root)
     
     if not image_files:
         print("❌ No supported image files found in project root")
