@@ -197,13 +197,8 @@ ESP32-S3 Geek LCD_BUTTON Program
 📍 Offset: (0, 82)
 ✅ Scaled, letterboxed, and rotated 270° clockwise
 ✅ Loaded JPEG: vacation.jpg
-📁 All available images:
-  1. pic1.png (embedded)
-  2. pic2.png (embedded)  
-  3. profile.jpg (embedded)
-  4. vacation.jpg (SD card)
 🎉 LCD_BUTTON PROGRAM READY!
-📸 Total images available: 4
+📸 Total images available from SD card
 Press BOOT button to cycle through all images!
 ```
 
