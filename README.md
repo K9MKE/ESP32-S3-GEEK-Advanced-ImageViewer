@@ -180,26 +180,25 @@ pio device monitor --baud 115200
 
 ## Serial Monitor Output Example
 
+**Note**: Scaling/processing messages only appear when loading new images (during startup or when cycling through images with the button).
+
 ```
-===================================
-ESP32-S3 Geek LCD_BUTTON Program
-===================================
-✅ Hardware initialized
-✅ LCD initialized successfully!
-✅ Paint initialized  
-📸 Initializing embedded images...
-✅ 3 embedded images initialized
+🖥️  ESP32-S3 GEEK Advanced Image Viewer v3.0
+📸 Embedded images disabled - using SD card images only
+💡 To enable embedded images, uncomment #define ENABLE_EMBEDDED_IMAGES in image.h
 ✅ SD Card initialized successfully!
 🔍 Loading images from SD card...
-📖 Loading JPEG: vacation.jpg
+
+# Image processing messages (appear when loading each JPEG):
+📖 Loading JPEG: my_photo.jpg
 📏 Original size: 1920x1080
 📐 Target size (after rotation): 135x76
-📍 Offset: (0, 82)
-✅ Scaled, letterboxed, and rotated 270° clockwise
-✅ Loaded JPEG: vacation.jpg
-🎉 LCD_BUTTON PROGRAM READY!
-📸 Total images available from SD card
-Press BOOT button to cycle through all images!
+📍 Offset: (0, 30)
+🔍 Scale factor: 0.123
+🎯 Using hardware scale: 2
+
+📱 Displaying: Manual Mode
+# Press button to cycle through images or hold to enter slideshow mode
 ```
 
 ## Embedded Images Recommendations
