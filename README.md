@@ -204,12 +204,16 @@ Press BOOT button to cycle through all images!
 
 ## Embedded Images Recommendations
 
-The current embedded images include:
-1. **pic1_data.h** - Sample image 1
-2. **pic2_data.h** - Sample image 2  
-3. **img_544884888...** - User profile photo
+This project focuses primarily on SD card JPEG files, but also includes professional status screen graphics for system feedback.
 
-### Suggested Embedded Images:
+### Current Status Screen Graphics:
+- **Manual Mode**: Display graphic for manual image browsing
+- **Slideshow Mode**: Display graphic with speed controls  
+- **No SD Card**: Professional "Insert SD Card" message
+- **No Images Found**: Clear "No JPEG files found" display
+- **Scanning**: Loading animation during SD card scan
+
+### Suggested Additional Embedded Images:
 - **Logo/Branding**: Company or project logo
 - **Default/Placeholder**: Generic "No SD Card" or "Insert Images" message
 - **Demo Images**: High-quality sample photos to showcase capabilities
